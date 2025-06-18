@@ -1,0 +1,18 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: black;
+  background: #eae7dc
+    url("https://www.transparenttextures.com/patterns/marble.png");
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}

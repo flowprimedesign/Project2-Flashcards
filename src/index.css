@@ -1,0 +1,207 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-width: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background-size: 400px 400px;
+  background: #eae7dc
+    url("https://www.transparenttextures.com/patterns/marble.png");
+}
+
+.App {
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eae7dc
+    url("https://www.transparenttextures.com/patterns/marble.png");
+}
+.Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.Title {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.SubTitle {
+  font-size: 1rem;
+  display: inline-block;
+  padding-top: 0px;
+}
+
+.Deck {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  height: 75vh;
+  padding: 40px;
+  background-image: url("./assets/frame.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.CardInfo {
+  font-size: 1.1rem;
+  background: #f5f0e6;
+  color: #7c6f57;
+  border: 5px solid #bfa76f;
+  margin: 30px 0 0 0;
+  padding: 8px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+.Card {
+  perspective: 1000px;
+  width: 470px;
+  height: 370px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+  padding-top: 103px;
+  padding-right: 10px;
+}
+
+/* .Card:hover {
+  transform: scale(1.05);
+} */
+/* .Card:active {
+  background-color: rgb(38, 222, 151, 0.6);
+} */
+/* .Card:focus {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+} */
+
+.CardContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.CardContent.flipped {
+  transform: rotateX(180deg);
+}
+.CardFront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.frontText {
+  padding-top: 10px;
+  text-shadow: 2px 2px 8px rgba(243, 235, 235, 0.972);
+}
+
+.imgContainer {
+  width: auto;
+  max-width: 80%;
+  height: auto;
+  max-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.CardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-shadow: 2px 2px 8px rgba(243, 235, 235, 0.972);
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transform: rotateX(180deg);
+}
+
+.ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.prevButton,
+.nextButton {
+  background: #bfa76f;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 8px 24px;
+  margin: 0 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s;
+}
+.prevButton:hover,
+.nextButton:hover {
+  background: #a68b4c;
+}
+
+@media (max-width: 600px) {
+  .Deck {
+    width: 98vw;
+    height: 60vw;
+    min-width: 0;
+    min-height: 0;
+    padding: 8px;
+  }
+  .Card {
+    width: 92vw;
+    height: 50vw;
+    min-width: 0;
+    min-height: 0;
+    font-size: 1.1rem;
+    padding-top: 20px;
+    padding-right: 0;
+  }
+  .CardInfo {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+  .ButtonContainer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
