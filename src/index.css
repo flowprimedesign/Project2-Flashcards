@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   box-sizing: border-box;
-  padding-top: 25px;
+  padding-top: 120px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -155,6 +155,32 @@ body {
   transform: rotateX(180deg);
 }
 
+.userAnswer {
+  font-size: 1.1rem;
+  background: #f5f0e6;
+  color: #7c6f57;
+  border: 5px solid #bfa76f;
+  margin: 20px;
+  padding: 8px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.answerButton {
+  background: #bfa76f;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 8px 24px;
+  margin: 0 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s;
+}
+
+.answerButton:hover {
+  background: #a68b4c;
+}
+
 .ButtonContainer {
   display: flex;
   flex-direction: row;
@@ -177,6 +203,28 @@ body {
 .prevButton:hover,
 .nextButton:hover {
   background: #a68b4c;
+}
+.prevButton:disabled,
+.nextButton:disabled {
+  background-color: #cccccc;
+  color: #888888;
+  cursor: not-allowed;
+  opacity: 0.6;
+  border: 1px solid #bbbbbb;
+  box-shadow: none;
+}
+.randomButton {
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffb347;
+  color: white;
+  cursor: pointer;
+}
+.randomButton:hover {
+  background-color: #e69500;
 }
 
 @media (max-width: 600px) {
